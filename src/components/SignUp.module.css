@@ -78,7 +78,7 @@
 .formField:nth-child(6) label {
   color: #1a73e8;
 }
-input[type="checknox"] {
+input[type="checkbox"] {
   margin-left: 20px;
   height: 18px;
   width: 18px;
@@ -87,13 +87,13 @@ input[type="checknox"] {
   appearance: none;
   border: 1px solid #1a73e8;
 }
-input[type="checknox"]:checked {
+input[type="checkbox"]:checked {
   width: 18px;
   height: 18px;
   border-radius: 50%;
   background-color: #1a73e8;
 }
-input[type="checknox"]:focus {
+input[type="checkbox"]:focus {
   width: 18px;
   height: 18px;
   border: 2px solid #004aaa;
