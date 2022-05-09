@@ -1,6 +1,6 @@
 describe("login test", () => {
   it("visit the login page", function () {
-    cy.visit("http://localhost:3003/login");
+    cy.visit("http://localhost:3000/login");
   });
 
   it("Fill in the inputs and login successfuly", () => {
