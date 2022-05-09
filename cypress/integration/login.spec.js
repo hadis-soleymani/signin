@@ -8,4 +8,13 @@ describe("login test", () => {
     cy.get('input[name="password"]').type("123456");
     cy.get("form").submit();
   });
+
+  function userID_Allpha() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    for (var i = 0; i < 5; i++) {
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+      return text;
+    }
+  }
 });

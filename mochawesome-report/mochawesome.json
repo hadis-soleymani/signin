@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-05-09T16:43:29.870Z",
+    "end": "2022-05-09T16:43:34.832Z",
+    "duration": 4962,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7eb796b7-58d8-4bf6-860a-05602981e4e1",
+      "title": "",
+      "fullFile": "cypress/integration/login.spec.js",
+      "file": "cypress/integration/login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "00624b2c-fb8f-4d92-ab2e-1ac19ab78ef6",
+          "title": "login test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "visit the login page",
+              "fullTitle": "login test visit the login page",
+              "timedOut": null,
+              "duration": 761,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000/login\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/login\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/login\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at http://localhost:7022/__cypress/runner/cypress_runner.js:163327:82\n    at visitFailedByErr (http://localhost:7022/__cypress/runner/cypress_runner.js:162631:12)\n    at http://localhost:7022/__cypress/runner/cypress_runner.js:163326:11\n    at tryCatcher (http://localhost:7022/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:7022/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:7022/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:7022/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:7022/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:7022/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:7022/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:7022/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:7022/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:7022/__cypress/tests?p=cypress\\integration\\login.spec.js:101:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:3000\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1142:16)\n  ",
+                "diff": null
+              },
+              "uuid": "ddd06c9d-2241-49d7-b4be-1def62c6368c",
+              "parentUUID": "00624b2c-fb8f-4d92-ab2e-1ac19ab78ef6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fill in the inputs and login successfuly",
+              "fullTitle": "login test Fill in the inputs and login successfuly",
+              "timedOut": null,
+              "duration": 4157,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[name=\"email\"]').type(\"hadis@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"123456\");\ncy.get(\"form\").submit();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"email\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"email\"]`, but never found it.\n    at Context.eval (http://localhost:7022/__cypress/tests?p=cypress\\integration\\login.spec.js:104:8)",
+                "diff": null
+              },
+              "uuid": "8209b3c5-ac8f-40dc-87ec-b1f5926c0dad",
+              "parentUUID": "00624b2c-fb8f-4d92-ab2e-1ac19ab78ef6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ddd06c9d-2241-49d7-b4be-1def62c6368c",
+            "8209b3c5-ac8f-40dc-87ec-b1f5926c0dad"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4918,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
