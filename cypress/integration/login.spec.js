@@ -4,17 +4,17 @@ describe("login test", () => {
   });
 
   it("Fill in the inputs and login successfuly", () => {
-    cy.get('input[name="email"]').type("hadis@gmail.com");
-    cy.get('input[name="password"]').type("123456");
+    cy.get('input[name="email"]').type(userID_Allpha() + "@gmail.com");
+    cy.get('input[name="password"]').type(userID_Allpha());
     cy.get("form").submit();
   });
 
   function userID_Allpha() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 6; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
-      return text;
     }
+    return text;
   }
 });
